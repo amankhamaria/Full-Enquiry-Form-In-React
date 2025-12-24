@@ -21,6 +21,9 @@ const EnquiryForm = () => {
         body: JSON.stringify(enquiryDetails),
       });
 
+       setIsLoading(false);
+      console.log("Form Submitted");
+      onSubmit();
       setName("");
       setEmail("");
       setEnquiryFor("");
@@ -28,7 +31,6 @@ const EnquiryForm = () => {
       setMessage("");
     } catch (err) {
       console.log(err);
-    } finally {
       setIsLoading(false);
     }
   };
