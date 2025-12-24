@@ -15,7 +15,7 @@ const EnquiryForm = () => {
     try {
       const enquiryDetails = { name, enquiryFor, mobileNo, email, message };
 
-      await fetch(" http://localhost:5173/enquiries", {
+      await fetch("enquiries", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(enquiryDetails),

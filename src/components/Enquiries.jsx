@@ -6,7 +6,7 @@ const Enquiries = () => {
   useEffect(() => {
     const getEnquiries = async () => {
       try {
-        const res = await fetch(" http://localhost:5173/enquiries");
+        const res = await fetch("http://localhost:3000/enquiries");
         const data = await res.json();
         setAllEnquiries(data);
       } catch (err) {
